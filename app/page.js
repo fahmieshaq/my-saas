@@ -27,7 +27,7 @@ export default async function Home() {
       <section className="max-w-5xl mx-auto pt-8">
         <div className="flex justify-between items-center">
           <div className="text-center">
-            <h1 className="font-bold">My Logo</h1>
+            <h1 className="font-bold">UPDATED - My Logo</h1>
             <p className="text-sm">My slogan here</p>
           </div>
           <div>
