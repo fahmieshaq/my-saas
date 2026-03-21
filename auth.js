@@ -9,7 +9,7 @@ const config = {
         Resend({
             apiKey: process.env.RESEND_KEY,
             from: "noreply@xetoor.com",
-            name: "EmailX",
+            name: "Email",
         }),
         Google({
             clientId: process.env.GOOGLE_CLIENT_ID,

@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { auth } from "@/auth";
+import ButtonLogin from "@/components/ButtonLogin";
+import ButtonLogout from "@/components/ButtonLogout";
+import ButtonCheckout from "@/components/ButtonCheckout";
+import ButtonPortal from "@/components/ButtonPortal";
 
 // import clientPromise from "@/libs/mongo";
 
@@ -50,8 +54,11 @@ export default async function Home() {
             </ul>
           </div>
           <div className="flex gap-2">
-            <button className="btn btn-neutral">Neutral</button>
-            <button className="btn btn-primary">Primary</button>
+            {session ? <Link href="/dashboard" className={`btn btn-primary`}>{session.user.email}</Link> : <ButtonLogin />}
+            {session ? <ButtonLogout /> : null}
+            <ButtonCheckout />
+            <ButtonPortal />
+            {/* <button className="btn btn-primary">Primary</button> */}
           </div>
         </div>
       </section>
